@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fitur">
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_view" />
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/back_button_desc"
+        android:src="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/text_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Fitur"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/header_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_view"
+        android:layout_margin="16dp"
+        android:stretchColumns="1,2,3">
+
+        <TableRow android:background="@color/redSecondary">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="10dp"
+                android:text="Atribut"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="10dp"
+                android:text="Tipe Data"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Keterangan"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_table"
+        android:layout_marginTop="-20dp"
+        android:paddingBottom="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:stretchColumns="1,2,3">
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="WBC"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/WBC"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="LYMp"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/LYMp"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="NEUTp"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/NEUTp"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="LYMn"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/LYMn"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="NEUTn"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/NEUTn"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="RBC"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/RBC"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="HGB"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/HGB"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="HCT"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/HCT"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="MCV"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/MCV"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="MCH"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/MCH"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="MCHC"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/MCHC"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="PLT"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/PLT"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="PDW"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/PDW"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="PCT"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="float64"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:padding="10dp"
+                        android:text="@string/PCT"
+                        android:textSize="14sp" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

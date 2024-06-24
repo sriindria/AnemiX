@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AnemiX</string>
+
+    <string name="WBC">White Blood Cell count, yaitu jumlah total sel darah putih dalam darah. WBC penting untuk respons imun tubuh terhadap infeksi. </string>
+    <string name="LYMp">Lymphocyte percentage, yaitu persentase limfosit dalam darah. Limfosit adalah sel darah putih yang berperan penting dalam sistem kekebalan tubuh, terutama dalam melawan infeksi virus dan bakteri tertentu.</string>
+    <string name="NEUTp">Neutrophil percentage, yaitu persentase neutrofil dalam darah. Neutrofil adalah jenis sel darah putih yang paling banyak dan merupakan garis pertahanan pertama terhadap infeksi bakteri.</string>
+    <string name="LYMn">Lymphocyte count, yaitu jumlah absolut limfosit dalam darah. Ini diukur dalam sel per mikroliter (sel/uL).</string>
+    <string name="NEUTn">Neutrophil count, yaitu jumlah absolut neutrofil dalam darah. Ini juga diukur dalam sel per mikroliter (sel/uL).</string>
+    <string name="RBC">Red Blood Cell count, yaitu jumlah total sel darah merah dalam darah. RBC berperan mengangkut oksigen ke seluruh tubuh.</string>
+    <string name="HGB">Hemoglobin, yaitu jumlah hemoglobin dalam darah. Hemoglobin protein yang terdapat di dalam sel darah merah dan berfungsi mengikat oksigen.</string>
+    <string name="HCT">Hematocrit, yaitu persentase volume darah yang ditempati oleh sel darah merah (eritrosit). Hematokrit berperan dalam menentukan kapasitas darah untuk membawa oksigen ke seluruh tubuh.</string>
+    <string name="MCV">Mean Corpuscular Volume, yaitu Rata-rata ukuran volume sel darah merah.</string>
+    <string name="MCH">Mean Corpuscular Hemoglobin, yaitu Rata-rata jumlah hemoglobin per sel darah merah.</string>
+    <string name="MCHC">Mean Corpuscular Hemoglobin Concentration, yaitu Rata-rata konsentrasi hemoglobin dalam sel darah merah.</string>
+    <string name="PLT">Platelet count, yaitu Jumlah trombosit atau platelet dalam darah. Platelet berperan penting dalam pembekuan darah.</string>
+    <string name="PDW">Platelet Distribution Width, yaitu Ukuran variasi ukuran platelet dalam darah.</string>
+    <string name="PCT">Procalcitonin, yaitu Tes prokalsitonin yaitu pemeriksaan terpisah yang digunakan untuk membantu diagnosis sepsis, yaitu infeksi berat yang disertai dengan respons inflamasi sistemik.</string>
+    <string name="Diagnosis">Jenis anemia berdasarkan parameter CBC.
+        \nAda 8 jenis diagnosis:
+        \n- Healthy
+        \n- Iron deficiency anemia
+        \n- Leukemia
+        \n- Leukemia with thrombocytopenia
+        \n- Macrocytic anemia
+        \n- Normocytic hypochromic anemia
+        \n- Normocytic normochromic anemia
+        \n- Other microcytic anemia
+        \n- Thrombocytopenia</string>
+
+    <string name="deskripsi">Dataset ini berasal dari Kaggle yang berisi data tentang jenis Anemia, mencakup berbagai jumlah sel darah, seperti HGB, WBC, RBC, MCV, dll.
+        Tujuannya adalah menggunakan jumlah sel darah ini untuk memprediksi berbagai jenis anemia.
+        \nData tersebut terdiri dari 1281 baris dan 15 kolom yang diberi label secara manual dari beberapa CBC (Complete Blood Count).</string>
+    <string name="library">- pandas dan numpy digunakan untuk manipulasi data.
+        \n - matplotlib.pyplot dan seaborn digunakan untuk visualisasi data.
+        \n - train_test_split dari sklearn.model_selection digunakan untuk membagi data menjadi data latih dan uji.
+        \n - LabelEncoder dari sklearn.preprocessing digunakan untuk mengubah label kategori menjadi numerik.
+        \n - Sequential, Dense, dan Dropout dari keras.models dan keras.layers digunakan untuk membangun model neural network.
+        \n - accuracy_score dari sklearn.metrics digunakan untuk menghitung akurasi model.</string>
+
+    <string name="titlemodel1">Metode ANN untuk Klasifikasi Tipe Anemia</string>
+    <string name="titlemodel2">Cara Kerja ANN untuk Klasifikasi Tipe Anemia</string>
+    <string name="descmodel1">Artificial Neural Network (ANN) adalah salah satu metode dalam machine learning yang meniru cara kerja otak manusia untuk memproses informasi.
+        \nANN terdiri dari beberapa lapisan neuron yang terhubung dan bekerja bersama untuk memecahkan masalah tertentu.
+        \nDalam kasus klasifikasi tipe anemia, ANN digunakan untuk menganalisis berbagai fitur dari data darah pasien, seperti hemoglobin, hematokrit, MCV, MCH, dan lainnya untuk mengklasifikasikan jenis anemia berdasarkan pola dalam data tersebut.</string>
+    <string name="inisiasimodel">Model Sequential adalah model linear di mana lapisan dibangun satu per satu. Setiap lapisan memiliki satu input dan satu output.</string>
+    <string name="layers">Lapisan pertama memiliki 128 neuron dengan fungsi aktivasi ReLU.
+        \nLapisan kedua memiliki 64 neuron dengan fungsi aktivasi ReLU.
+        \nLapisan ini memiliki 32 neuron dengan fungsi aktivasi ReLU.</string>
+    <string name="layeroutput">Lapisan output ini memiliki 9 neuron yang sesuai dengan jumlah kelas (jenis anemia) yang akan diprediksi.
+        \nFungsi aktivasi Softmax digunakan untuk menghasilkan probabilitas dari setiap kelas.</string>
+    <string name="kompilasimodel">Model ANN dikompilasi menggunakan optimizer `Adam` dengan learning rate 0.001 untuk efisiensi dan adaptabilitas dalam pembaruan bobot.
+        \nFungsi loss yang digunakan adalah `sparse_categorical_crossentropy`, cocok untuk klasifikasi multi-kelas dengan label integer, dan metrik yang digunakan adalah `Accuracy` untuk mengukur seberapa baik model dalam mengklasifikasikan data dengan benar.</string>
+    <string name="pelatihanmodel">Proses pelatihan model ANN menggunakan metode `model.fit` dimulai dengan data pelatihan `X_train dan y_train`. Parameter `batch_size=1` berarti model diperbarui setelah setiap sampel, dan `epochs=50` menunjukkan bahwa model akan menjalani 50 iterasi penuh melalui dataset. Dengan `verbose=1`, pelatihan akan menampilkan log rinci, sedangkan `shuffle=True` memastikan data diacak sebelum setiap epoch untuk meningkatkan generalisasi model. Terakhir, `validation_split=0.1` berarti 10% dari data pelatihan digunakan untuk validasi guna memantau kinerja model selama pelatihan.</string>
+    <string name="hasilakurasi">Hasil akurasi sebesar 0.7859922178988327 (atau sekitar 78.59%) yang diperoleh dari model ANN menunjukkan bahwa model ini berhasil mengklasifikasikan dengan benar sekitar 78.59% dari data pengujian.
+        \nAkurasi 78.59% menunjukkan bahwa model ANN cukup efektif dalam menangkap pola dari fitur-fitur input yang digunakan untuk membedakan jenis-jenis anemia.
+        \nMeski demikian, akurasi ini juga menunjukkan adanya ruang untuk perbaikan, karena sekitar 21.41% dari sampel masih belum tepat diklasifikasikan.</string>
+    <string name="titlemodel3">Hasil akurasi</string>
+    <string name="desc_apk">Deskripsi: \nAnemiX adalah aplikasi yang dirancang untuk membantu pengguna dalam mengenali dan memahami berbagai jenis anemia. \nAplikasi ini untuk mengklasifikasi jenis anemia yang diderita, menyediakan informasi penyebabnya, serta tips dan saran untuk mengatasi kondisi tersebut.</string>
+    <string name="catatan_apk">Catatan: \nAplikasi ini tidak menggantikan saran medis profesional. Pengguna dianjurkan untuk selalu berkonsultasi dengan dokter atau ahli kesehatan sebelum mengambil tindakan berdasarkan informasi dari aplikasi.</string>
+    <string name="back_button_desc">back</string>
+
+</resources>
